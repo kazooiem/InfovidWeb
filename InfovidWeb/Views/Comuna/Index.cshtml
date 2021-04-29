@@ -1,0 +1,39 @@
+﻿@using InfovidWeb.Models;
+@model List <ComunaCLS> 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div style="align-content:center">
+    <table style="
+        border-style: solid;
+        font-family: Arial;
+        border-width:medium;
+        font-size: 30px;
+        text-align: center;
+        align-content: center"
+           class="table table-bordered table-hover">
+
+        <thead>
+            <tr>
+                <td style="border-style:solid;" width="20%">Nombre de Comuna</td>
+                <td style="border-style:solid;" width="10%">Descripcion</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td style="border-style:solid;">@item.nombre</td>
+                    <td style="border-style:solid;">@item.fase</td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>
+
